@@ -1,11 +1,11 @@
 $(function() {
   stack = gajus.Swing.Stack(); //load Swing library
   var data = [
-  '<div style="background-image: url(\'lenovo-laptop-yoga-900-series-list.png\');><p>Yoga é a linha de notebooks mais versátil da Lenovo?</p></div>',
-  '<img src="lenovo-laptop-yoga-900-series-list.png" alt="" class="img-rounded"><p>Yoga é a linha de notebooks mais versátil da Lenovo?</p>',
-  '<img src="lenovo-laptop-yoga-900-series-list.png" alt="" class="img-rounded"><p>Yoga é a linha de notebooks mais versátil da Lenovo?</p>',
-  '<img src="lenovo-laptop-yoga-900-series-list.png" alt="" class="img-rounded"><p>Yoga é a linha de notebooks mais versátil da Lenovo?</p>',
-  '<img src="lenovo-laptop-yoga-900-series-list.png" alt="" class="img-rounded"><p>Yoga é a linha de notebooks mais versátil da Lenovo?</p>'
+  '<figure></figure><p>Yoga é a linha de notebooks mais versátil da Lenovo?</p></div>',
+  '<figure></figure><p>Yoga é a linha de notebooks mais versátil da Lenovo?</p>',
+  '<figure></figure><p>Yoga é a linha de notebooks mais versátil da Lenovo?</p>',
+  '<figure></figure><p>Yoga é a linha de notebooks mais versátil da Lenovo?</p>',
+  '<figure></figure><p>Yoga é a linha de notebooks mais versátil da Lenovo?</p>'
   ];
   
   //Current position in Array
