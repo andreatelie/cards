@@ -1,17 +1,120 @@
-.stack {
+body{
   position: relative;
-  width: 600px;
-  margin: 50px auto;
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
+  background-color: #2C3948;
+  font-family: 'Lato', sans-serif;
+  overflow-x: hidden;
 }
+
+body::before{
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 415px;
+  height: 157px;
+  z-index: 1;
+  background-image: url('../images/bg-top.jpg');
+}
+
+body::after{
+  content: '';
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 843px;
+  height: 394px;
+  z-index: 1;
+  background-image: url('../images/bg-bottom.jpg');
+}
+
+header{
+  padding: 70px 30px;
+  text-align: center;
+  position: relative;
+  z-index: 3;
+}
+
+h1{
+  font-size: 60px;
+  color: #F06A2E;
+  font-weight: 300;
+  margin: 0;
+}
+h2{
+  position: fixed;
+  top: 20px;
+  right: 0;
+  width: 54px;
+  height: 161px;
+  background: url('../images/logo-lenovo.png') center no-repeat;
+}
+h2 span{
+  opacity: 0;
+}
+
+main.control{
+  position: relative;
+  margin: 30px auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+main .align{
+  padding: 20px 13px;
+  background: rgba(0, 0, 0, 0.4);
+  position: relative;
+  z-index: 3;
+}
+
+main button{
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0 5px;
+  outline: none;
+  padding: 10px 30px;
+  min-width: 85px;
+  transition: 0.3s all ease;
+  cursor: pointer !important;
+}
+
+main button#btnfalse{
+  background-color: #f72b2b;
+}
+main button#btntrue{
+  background-color: #499c6e;
+}
+main button#btnfalse:hover, main button#btntrue:hover{
+  background-color: #F06A2E;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
+}
+
+.stack {
+  width: 600px;
+  height: 550px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  position: relative;
+  z-index: 9;
+  border: 1px solid #cccccc;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.75);
+}
+
 .stack .card, .stack .finalcard {
   width: 100%;
-  height: calc(100vh - 150px);
+  height: 550px;
   border-radius: 10px;
-  background: white;
-  box-shadow: 1px 1px 0px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: none;
+  border: none;
   position: absolute;
+  /*background-color: rgba(255, 255, 255, 0.2);*/
+  background-color: #ffffff;
 }
 .stack .card .content, .stack .finalcard .content {
   left: 50%;
@@ -22,15 +125,90 @@
   font-size: 30px;
 }
 
-.meta {
-  position: fixed;
-  bottom: 0px;
-  width: 100%;
-  height: 50px;
-  background: rgba(0, 0, 0, 0.1);
-  text-align: center;
+.card{
+  padding: 30px;
+  cursor: pointer !important;
 }
-.meta button {
-  padding: 10px 20px;
-  margin: 10px 5px;
+.card figure{
+  margin: 0 auto 20px auto;
+}
+#card_0 figure{
+  background: #ffffff url('../images/lenovo-thinkpad-x1-carbon-2017-feature2.png') center no-repeat;
+  width: 326px;
+  height: 221px;
+}
+#card_1 figure{
+  background: #ffffff url('../images/Legion-Y72015Inch-halo.png') center no-repeat;
+  width: 326px;
+  height: 221px;
+}
+#card_2 figure{
+  background: #ffffff url('../images/lenovo-laptop-yoga-900-series-list.png') center no-repeat;
+  width: 326px;
+  height: 221px;
+}
+/*#card_3 figure{
+  background: #ffffff url('../images/note-card.png') center no-repeat;
+  width: 326px;
+  height: 221px;
+}*/
+
+.card p{
+  font-size: 32px;
+  color: #2C3948;
+  font-weight: 400;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+.card .figure{
+
+}
+
+@media (max-width: 991px){
+  body::before, body::after{
+    opacity: 0.3;
+  }
+  .card p {
+    font-size: 28px;
+  }
+}
+@media (max-width: 767px){
+  body::before, body::after{
+    opacity: 0.15;
+  }
+  header {
+    padding: 75px 15px 35px 15px;
+  }
+  h1{
+    font-size: 50px;
+  }
+  h2{
+    position: absolute;
+    transform: rotate(90deg);
+    top: 0;
+    right: 50%;
+    margin-right: -27px;
+    width: 54px;
+    height: 161px;
+    margin-top: -54px;
+  }
+  .stack{
+    width: 100%;
+    height: 460px;
+  }
+  .card{
+    padding: 15px;
+  }
+  .card p {
+    font-size: 24px;
+    line-height: 35px;
+  }
+  #card_0 figure, #card_1 figure, #card_2 figure, #card_3 figure{
+    width: 265px;
+    height: 180px;
+    background-size: cover;
+  }
+  .stack .card, .stack .finalcard{
+    height: 460px;
+  }
 }
