@@ -2,7 +2,7 @@ $(function() {
   stack = gajus.Swing.Stack(); //load Swing library
   var data = [
   '<figure></figure><p>A série X1 Carbon é conhecida por ter os ultrabooks mais finos do mercado.<br>É verdade que ele tem menos de 16mm de espessura?</p></div>',
-  '<figure></figure><p>A série Y720 é ideal para jogos e utiliza a placa de vídeo GeForce GTX. Nessa série de notebooks é possível rodar jogos em até 60 FPS?</p>',
+  '<figure></figure><p>A série Y720 é ideal para jogos e utiliza a placa de vídeo GeForce GTX.<br>Nessa série de notebooks é possível rodar jogos em até 60 FPS?</p>',
   '<figure></figure><p>Yoga é a linha de notebooks mais versátil da Lenovo?</p>'
   ];
   
